@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Webpack 3 React Basic Config/src/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">Webpack 3 React Basic Config/src</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/13</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// NPM Modules
+import React <span class="cstat-no" title="statement not covered" >from 'react';<span class="cstat-no" title="statement not covered" ></span></span>
+import reactDOM <span class="cstat-no" title="statement not covered" >from 'react-dom';<span class="cstat-no" title="statement not covered" ></span></span>
+import { AppContainer <span class="cstat-no" title="statement not covered" >} from 'react-hot-loader';</span>
+&nbsp;
+// Component
+import App <span class="cstat-no" title="statement not covered" >from './container/App';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+&nbsp;
+/**
+ * Used to render out a copy of the react application (nested inside Component) to the targetDiv
+ * @param {DOM node} targetDiv - The DOM node where the app is going to be rendered
+ * @param {element} Component - Base container component that the application loads into
+ */
+const renderToTargetDiv <span class="cstat-no" title="statement not covered" >= (target<span class="fstat-no" title="function not covered" >Div, Component) =&gt;</span> {</span>
+<span class="cstat-no" title="statement not covered" >    reactDOM.render(</span>
+        &lt;AppContainer&gt;
+            &lt;Component /&gt;
+        &lt;/AppContainer&gt;,
+        targetDiv,
+    );
+};
+&nbsp;
+/**
+ * Used to find all instances of a specific className and render a copy of the application to each of them
+ * @param {string} appClassName - The DIV(s) class name to render the application into
+ */
+const findAndRenderToTarget <span class="cstat-no" title="statement not covered" >= (appCla<span class="fstat-no" title="function not covered" >ssName) =&gt; {</span></span>
+    const classList <span class="cstat-no" title="statement not covered" >= global.document.getElementsByClassName(appClassName</span>);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    Array.prototype.forEach.call(classList, <span class="fstat-no" title="function not covered" >(c</span>urrentDiv) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        renderToTargetDiv(currentDiv, App);</span>
+&nbsp;
+        // Hot Module Reloading - auto disables when in production
+<span class="cstat-no" title="statement not covered" >        if (module.hot) {</span>
+<span class="cstat-no" title="statement not covered" >            module.hot.accept('./container/App', <span class="fstat-no" title="function not covered" >()</span> =&gt; renderT<span class="cstat-no" title="statement not covered" >oTargetDiv(currentDiv, App));</span></span>
+        }
+    });
+};
+&nbsp;
+// This is where it all starts
+<span class="cstat-no" title="statement not covered" >findAndRenderToTarget('appnamehere');</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Sep 05 2017 23:21:40 GMT+1000 (AUS Eastern Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

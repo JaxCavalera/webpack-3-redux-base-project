@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Webpack 3 React Basic Config/utils/generator-helpers.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">Webpack 3 React Basic Config/utils</a> generator-helpers.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span>
+    These are some small generator helpers I wrote to auto run the .next() calls
+    on yielded actions inside a generator.
+&nbsp;
+    Ideally generators should only be yielding things that return a promise
+    a.k.a Promisified function calls like fetch
+&nbsp;
+    To get started:
+    import { runGenerator } from '../path_to_this_file/generator-helpers';
+&nbsp;
+    USAGE EXAMPLE:
+    ==============
+    // Generator function
+    export function* getMossByteDbId(constants) {
+        try {
+            let mossByteId = yield apis.checkMossByteForExistingDb(constants.baseUrl, constants.publicKey);
+&nbsp;
+            if (mossByteId === '') {
+                mossByteId = yield apis.createMossDb(constants.baseUrl, constants.publicKey, constants.privateKey);
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
+&nbsp;
+    const argsObj = {
+        baseUrl: 'https://whatever/',
+        publicKey: '45687sfa-F324-a879aa55',
+        privateKey: 'asdfa121fa-875-33141124-a879aa55',
+    }
+&nbsp;
+    runGenerator(getMossByteDbId).then(result =&gt; console.log(result));
+&nbsp;
+    =================================
+&nbsp;
+    Calls to runGenerator can be yielded inside another Higher Order Generator
+    this will allow composing of multiple generator functions with a single .then() to handle any output
+&nbsp;
+    Maybe use nested generators (HOG's) sparingly to ensure easier to read code and chances of more pure functions
+*/
+&nbsp;
+/**
+ * Takes a variable and checks that its constructor (base class) is an "Object"
+ * instead of being a "Date", "Null", "Array", etc.
+ * @param {object} variable - Should have "Object" as the constructor
+ * @return {bool} - Only returns true if "Object" is the variable's constructor
+ */
+export const isReal<span class="cstat-no" title="statement not covered" >Object = (variable) =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+        typeof variable === 'object' &amp;&amp;
+        Object.prototype.toString.call(variable).slice(8, -1) === 'Object'
+    );
+};
+&nbsp;
+/**
+ * Takes a variable and checks that its constructor (base class) is an "Array"
+ * instead of being a "Date", "Null", "Object", etc.
+ * @param {array} variable - Should have "Array" as the constructor
+ * @return {bool} - Only returns true if "Array" is the variable's constructor
+ */
+export const isRea<span class="cstat-no" title="statement not covered" >lArray = (variable) =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+        typeof variable === 'object' &amp;&amp;
+        Object.prototype.toString.call(variable).slice(8, -1) === 'Array'
+    );
+};
+&nbsp;
+/**
+ * Recursively calls itself to trigger .next() on the itterable object.
+ * Waits for the yielded promise (async fn) to resolve before triggering .next() again
+ * @param {object} itObj - Itterable object that has the .next() and .throw() methods
+ * @param {object} paramsObj - Wrapper for params:
+ *          - {object} paramsObj.error - Caught errors that may have bubbled up from a failed async fn (not yet implemented)
+ *          - {any} paramsObj.prevYieldValue - Value returned by the resolved promise
+ *          - {function} paramsObj.cb - Callback function used to pass the finalYieldValue back out via a promise
+ */
+export const next<span class="cstat-no" title="statement not covered" >Caller = (itObj, paramsObj) =&gt;<span class="fstat-no" title="function not covered" > {</span></span>
+    /*
+    Check if there were any errors from the previous yield action
+    
+    If an error occurred as a result of the previous itObj.next() call,
+    pass it back up to be handled by a try{}catch(){} in the generator
+    */
+<span class="cstat-no" title="statement not covered" >    if (paramsObj.error) {</span>
+<span class="cstat-no" title="statement not covered" >        itObj.throw(paramsObj.error);</span>
+    }
+&nbsp;
+    // Progress the generator forwards by 1 yield step assigning the previous yield value to the 'yield' placeholder
+    const genProgress <span class="cstat-no" title="statement not covered" >= itObj.next(paramsObj.prevYieldValue</span>);
+&nbsp;
+    // Check the progress, triggering the callback fn if all yields have completed
+<span class="cstat-no" title="statement not covered" >    if (genProgress.done) {</span>
+        // Trigger the callback function passing in the return value of the generator
+<span class="cstat-no" title="statement not covered" >        paramsObj.cb(paramsObj.error, paramsObj.prevYieldValue);</span>
+&nbsp;
+        // Return true to exit the recursive loop as the generator has finished yielding
+<span class="cstat-no" title="statement not covered" >        return paramsObj.prevYieldValue;</span>
+    }
+&nbsp;
+    /*
+        If the function has not exited yet it means either:
+        - There are more yields in the generator to process
+        or
+        - This is our last yield so calling itObj.next().done will === true
+    */
+    const genProgValueIsPromise = (
+<span class="cstat-no" title="statement not covered" >        typeof genProgress.value === 'object' &amp;&amp;</span>
+        Object.getPrototypeOf(genProgress.value) !== null &amp;&amp;
+        Object.getPrototypeOf(genProgress.value).toString().slice(8, -1) === 'Promise'
+    );
+&nbsp;
+    // If genProgress.value is a promise, async pause execution till it resolves
+<span class="cstat-no" title="statement not covered" >    if (genProgValueIsPromise) {</span>
+<span class="cstat-no" title="statement not covered" >        genProgress.value.then(<span class="fstat-no" title="function not covered" >(r</span>esolvedValue) =&gt; {</span>
+            const newParamsObj <span class="cstat-no" title="statement not covered" >= {</span>
+                error: paramsObj.error,
+                prevYieldValue: resolvedValue,
+                cb: paramsObj.cb,
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            nextCaller(itObj, newParamsObj);</span>
+        });
+    } else {
+        // This should almost never run, is here as a catcher incase unpromisified calls were yielded in the generator
+        const newParamsObj <span class="cstat-no" title="statement not covered" >= {</span>
+            error: paramsObj.error,
+            prevYieldValue: genProgress.value,
+            cb: paramsObj.cb,
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        nextCaller(itObj, newParamsObj);</span>
+    }
+};
+&nbsp;
+/**
+ * Takes a generator function and optional arguments object
+ * @param {function} genFn - The generator function to be processed 
+ * @param {object} argsObj - Only used for generators that need external params passed in i.e. callback fn etc.
+ */
+export const runGen<span class="cstat-no" title="statement not covered" >erator = (genFn, argsObj = null)<span class="fstat-no" title="function not covered" > =&gt; {<span class="cstat-no" title="statement not covered" ></span></span></span>
+<span class="cstat-no" title="statement not covered" >    return new Promise((resolve, <span class="fstat-no" title="function not covered" >re</span>ject) =&gt; {</span>
+        let iteratorObj;<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+        // Check if the generator had any arguments
+<span class="cstat-no" title="statement not covered" >        if (argsObj !== null) {</span>
+<span class="cstat-no" title="statement not covered" >            iteratorObj = genFn(argsObj);</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            iteratorObj = genFn();</span>
+        }
+&nbsp;
+        const paramsObj <span class="cstat-no" title="statement not covered" >= {</span>
+            cb: (error, r<span class="fstat-no" title="function not covered" >esu</span>lt) =&gt; {
+<span class="cstat-no" title="statement not covered" >                if (typeof result === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >                    reject('The generator yielded function that did not return a promise i.e missing "return" before fetch()', genFn);</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    resolve(result);</span>
+                }
+            },
+        };
+&nbsp;
+        // Will keep calling itself until all generator yields have completed
+<span class="cstat-no" title="statement not covered" >        nextCaller(iteratorObj, paramsObj);</span>
+    });
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Sep 05 2017 23:21:40 GMT+1000 (AUS Eastern Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

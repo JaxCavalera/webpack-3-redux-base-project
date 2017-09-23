@@ -1,0 +1,14 @@
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bemprefix__app {
+    font-size: 1.5vw;
+}
