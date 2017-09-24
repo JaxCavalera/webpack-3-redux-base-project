@@ -1,8 +1,9 @@
-// This config is only used for webpack itself.
+// This config is only used for webpack and jest.
 // Inside webpack.common.config.babel.js this gets overwritten turning off module transpiling to enable tree-shaking.
 {
     "plugins": [
         "transform-object-rest-spread",
+        "transform-class-properties",
         "transform-runtime"
     ],
     "presets": [

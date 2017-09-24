@@ -1,10 +1,10 @@
-// This is where business logic for the App container component goes
+// This is where business logic for the Home container component goes
 
 // NPM Modules
 import React from 'react';
 
 // Components
-import DemoComponent from '../components/DemoComponent/DemoComponent';
+import DemoComponent from '../../components/DemoComponent/DemoComponent';
 
 /**
  * Used to generate a collection of DemoComponents

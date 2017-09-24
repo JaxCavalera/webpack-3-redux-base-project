@@ -11,6 +11,7 @@ devConfig.devtool = 'inline-source-map';
 // The following configuration settings are what makes hot reloading possible
 devConfig.devServer = {
     hot: true,
+    historyApiFallback: true,
 };
 
 devConfig.plugins = [

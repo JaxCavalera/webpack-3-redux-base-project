@@ -1,10 +1,10 @@
 // Action types
-import * as actionTypes from 'DemoComponent-types';
+import * as actionTypes from './DemoComponent-types';
 
 // Standard Actions - Synchronous use cases only
-export const updateTestStateItem = (value) => ({
-    type: actionTypes.UPDATE_TEST_STATE_ITEM,
-    newTestStateItemValue: value,
+export const updateTestStateItems = (value) => ({
+    type: actionTypes.UPDATE_TEST_STATE_ITEMS,
+    newTestStateItems: value,
 });
 
 // Async Actions - Listened for by a Saga watcher and used to call API's or run other unknown duration based tasks

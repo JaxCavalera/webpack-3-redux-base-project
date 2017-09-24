@@ -2,15 +2,17 @@
 import * as actionTypes from './DemoComponent-types';
 
 export const initialState = {
-    testStateItem: 'placeholder',
+    testStateItems: {
+        default: 'placeholder',
+    },
 };
 
 export const demoReducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.UPDATE_TEST_STATE_ITEM: {
+        case actionTypes.UPDATE_TEST_STATE_ITEMS: {
             return {
                 ...state,
-                testStateItem: action.newTestStateItemValue,
+                testStateItems: action.newTestStateItems,
             };
         }
 

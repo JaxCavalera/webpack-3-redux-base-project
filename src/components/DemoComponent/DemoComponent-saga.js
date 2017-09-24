@@ -17,7 +17,7 @@ import * as actionTypes from './DemoComponent-types';
  */
 export function* getSomeData(action) {
     // Would have yielded an API function imported from DemoComponent-apis.js which is a pure fetch request
-    console.log(action.idValue);
+    yield console.log(action.idValue);
 }
 
 // Watchers for component specific generator functions (a.k.a sagas)

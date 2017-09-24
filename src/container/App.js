@@ -1,47 +1,33 @@
 // NPM Modules
+import { Route, Router, Switch } from 'react-router';
 import React, { Component } from 'react';
+import { createBrowserHistory } from 'history';
+
+// Page layouts
+import Home from '../pages/Home/Home';
+import DemoComponent from '../components/DemoComponent/DemoComponent';
 
 // Styles
 import './App.css';
 
-// Logic
-import * as logic from './App-logic';
-
-// Constants
-import * as constants from './App-constants';
-
-export default class App extends Component {
-    render() {
-        return (
-            <div className="bemprefix__app">
-                <span>App Components or Routing Goes Here</span>
-                <div className="bemprefix__app-demo-wrapper">
-                    {logic.generateDemoInstances(['this', 'is', 'some', 'demo', 'data'])}
-                </div>
-            </div>
-        );
-    }
-}
-
 /*
-Reference for if React Router were implemented
-// NPM Modules
-import { Route, Router, IndexRoute } from 'react-router';
-import React, { Component } from 'react';
-import { browserHistory } from 'history';
-
-// Page layouts
-import Home from '../pages/Home/Home';
-import Test from '../components/Test/Test';
-
+    NOTES:
+    - Additional <Routes> can be defined inline on child components.
+    - 'render' property on a Route is used to inject props.
+    - path='*' would usually point to a "page not found" type component
+*/
 export default class App extends Component {
     render() {
         return (
-            <Router history={browserHistory}>
-                <IndexRoute component={Home} />
-                <Route path='/test-only' component={Test} />
+            <Router history={createBrowserHistory()}>
+                <div className='bemprefix__app'>
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route exact path='/single' render={() => <DemoComponent dataValue='standaloneVersion' />} />
+                        <Route render={() => <div>page not found or index.html is being ran directly on a computer instead of hosted so routes won't work</div>} />
+                    </Switch>
+                </div>
             </Router>
         );
     }
 }
-*/

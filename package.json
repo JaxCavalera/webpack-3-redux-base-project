@@ -1,6 +1,6 @@
 {
   "name": "basic-webpack-3-react-app-config",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1",
   "description": "A basic webpack 3 and react config with jest for tests and instanbul for test coverage",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",

@@ -24,13 +24,16 @@ module.exports = {
         },
     },
     rules: {
-        'react/jsx-uses-react': 'error',
-        'react/jsx-uses-vars': 'error',
+        'arrow-body-style': 'off',
+        'arrow-parens': 'off',
+        'class-methods-use-this': 'off',
         indent: [
             'error',
             4,
+            {
+                SwitchCase: 1,
+            },
         ],
-        'linebreak-style': 'off',
         'import/prefer-default-export': 'off',
         "import/no-extraneous-dependencies": [
             "error",
@@ -42,14 +45,15 @@ module.exports = {
                 ],
             },
         ],
-        'class-methods-use-this': 'off',
+        'linebreak-style': 'off',
         'max-len': [
             'error',
             150,
         ],
         'no-bitwise': 'off',
-        'arrow-body-style': 'off',
         'no-param-reassign': 'off',
+        'react/jsx-uses-react': 'error',
+        'react/jsx-uses-vars': 'error',
     },
     plugins: [
         'react',

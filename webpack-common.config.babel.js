@@ -24,7 +24,12 @@ const jsRules = {
         babelrc: false,
         plugins: [
             'react-hot-loader/babel',
+
+            // Enables the use of object spread for things like reducers
             'transform-object-rest-spread',
+
+            // Enable arrow functions as class methods to auto-bind 'this'
+            'transform-class-properties',
             'transform-runtime',
         ],
         presets: [

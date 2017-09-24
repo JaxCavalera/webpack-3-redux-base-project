@@ -1,6 +1,6 @@
 // NPM Packages
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { optimize } from 'webpack';
+import { optimize, DefinePlugin } from 'webpack';
 
 // Config Imports
 import baseConfig from './webpack-common.config.babel';
@@ -26,6 +26,13 @@ if (hasCssLoaderConfig) {
 
 prodConfig.plugins = [
     ...prodConfig.plugins,
+
+    // Tells React and Redux to use production versions
+    new DefinePlugin({
+        'process.env': {
+            NODE_ENV: JSON.stringify('production'),
+        },
+    }),
 
     // Generates an overview of the bundles produced via commonsChunkPlugin
     new BundleAnalyzerPlugin({
