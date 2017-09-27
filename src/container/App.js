@@ -1,7 +1,6 @@
 // NPM Modules
-import { Route, Router, Switch } from 'react-router';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
-import { createBrowserHistory } from 'history';
 
 // Page layouts
 import Home from '../pages/Home/Home';
@@ -19,7 +18,7 @@ import './App.css';
 export default class App extends Component {
     render() {
         return (
-            <Router history={createBrowserHistory()}>
+            <BrowserRouter>
                 <div className='bemprefix__app'>
                     <Switch>
                         <Route exact path='/' component={Home} />
@@ -27,7 +26,7 @@ export default class App extends Component {
                         <Route render={() => <div>page not found or index.html is being ran directly on a computer instead of hosted so routes won't work</div>} />
                     </Switch>
                 </div>
-            </Router>
+            </BrowserRouter>
         );
     }
 }
