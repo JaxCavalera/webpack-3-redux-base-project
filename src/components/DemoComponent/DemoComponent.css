@@ -1,3 +1,12 @@
+@import '../../variables.css';
+
 .bemprefix__demo-component {
     font-size: 2vw;
+    background-color: $black;
+    color: $white;
+
+    @media (--tablet) {
+        background-color: $white;
+        color: $black;
+    }
 }
