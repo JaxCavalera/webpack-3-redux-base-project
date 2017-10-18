@@ -4,12 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>App Name Here</title>
+
+    <!-- Polyfill support for older browsers -->
+    <script>
+        var modernBrowser = (
+            'fetch' in window &&
+            'Promise' in window
+        );
+
+        if (!modernBrowser) {
+            var scriptElement = document.createElement('script');
+
+            scriptElement.async = false;
+            scriptElement.src = '/polyfills.bundle.js';
+            document.head.appendChild(scriptElement);
+        }
+    </script>
 </head>
 
 <body>
     <div class="appnamehere"></div>
-    <script src="assets/js/vendor.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>

@@ -93,6 +93,7 @@ const vendorList = [
 
 export default {
     entry: {
+        polyfills: './src/polyfills.js',
         app: ['react-hot-loader/patch', './src/index.js'],
         vendor: vendorList,
     },
