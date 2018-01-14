@@ -88,7 +88,7 @@ const cssRules = {
 
 // Selects all dependency packages except babel-runtime (which will go into app.js)
 const vendorList = [
-    ...Object.keys(pkg.dependencies).slice(1),
+    ...Object.keys(pkg.dependencies).filter(item => item !== 'babel-runtime'),
 ];
 
 export default {
